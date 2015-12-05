@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Heart Rates</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Resting pulse</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @heart_rates.each do |heart_rate| %>
+      <tr>
+        <td><%= heart_rate.name %></td>
+        <td><%= heart_rate.age %></td>
+        <td><%= heart_rate.resting_pulse %></td>
+        <td><%= link_to 'Show', heart_rate %></td>
+        <td><%= link_to 'Edit', edit_heart_rate_path(heart_rate) %></td>
+        <td><%= link_to 'Destroy', heart_rate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Heart rate', new_heart_rate_path %>

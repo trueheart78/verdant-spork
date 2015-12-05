@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @heart_rate.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @heart_rate.age %>
+</p>
+
+<p>
+  <strong>Resting pulse:</strong>
+  <%= @heart_rate.resting_pulse %>
+</p>
+
+<table class='table'>
+  <tr>
+    <th>Intensity</th>
+    <th>Rate</th>
+  </tr>
+  <% @heart_rate.karvonen_rates.each do |k| %>
+    <tr>
+      <td><%= k[:intensity] %> %</td>
+      <td><%= k[:rate] %> bpm</td>
+    </tr>
+  <% end %>
+<%= link_to 'Edit', edit_heart_rate_path(@heart_rate) %> |
+<%= link_to 'Back', heart_rates_path %>
