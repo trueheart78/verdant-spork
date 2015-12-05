@@ -6,9 +6,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'rspec-rails'
-gem 'factory_girl_rails'
-gem 'capybara'
 gem 'faker'
 gem 'simple_form'
 
@@ -17,6 +14,9 @@ group :development, :test do
   gem 'sqlite3'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 group :production do
